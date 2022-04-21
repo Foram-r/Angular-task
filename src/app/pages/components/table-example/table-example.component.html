@@ -1,0 +1,27 @@
+<div class="max-width-70">
+<mat-form-field appearance="standard">
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" #input />
+</mat-form-field>
+</div>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+  <ng-container matColumnDef="Id">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> No </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="BookImage">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Book Image </mat-header-cell>
+    <mat-cell *matCellDef="let element">  <img class="book-poster" [src]="element.attributes.display_properties.image"/> </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="BookName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Book Name </mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.attributes.content }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="CreateDate">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Created Date</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.attributes.created_at | date :'mediumDate'}} </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
+

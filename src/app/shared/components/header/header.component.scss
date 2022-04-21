@@ -1,0 +1,15 @@
+.nav-bar{
+  background: #3f51b5;
+  width: 100%;
+  flex: 1 1 auto;
+  height: 10%;
+   a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 24px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+}

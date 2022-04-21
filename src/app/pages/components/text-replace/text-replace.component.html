@@ -1,0 +1,14 @@
+<div class="relative">
+<div class="max-width-70">
+  <mat-form-field appearance="standard">
+    <mat-label>Enter text here</mat-label>
+    <input matInput placeholder="Placeholder" (keyup) ="onKeyUp($event)">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="replaceText()">Replace</button>
+</div>
+ <div class="main">
+   <div>
+    <p class="inner-text"> You entered :  {{initialText}}</p>
+   </div>
+ </div>
+</div>

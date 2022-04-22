@@ -1,14 +1,11 @@
 <div class="relative">
-<div class="max-width-70">
+<div class="max-width-40">
+  <div class="main">
+     <p class="inner-text">{{initialText}}</p>
+  </div>
   <mat-form-field appearance="standard">
-    <mat-label>Enter text here</mat-label>
-    <input matInput placeholder="Placeholder" (keyup) ="onKeyUp($event)">
+    <mat-label>Change text here</mat-label>
+    <input matInput placeholder="Placeholder"  [(ngModel)]="initialText">
   </mat-form-field>
-  <button mat-raised-button color="primary" (click)="replaceText()">Replace</button>
 </div>
- <div class="main">
-   <div>
-    <p class="inner-text"> You entered :  {{initialText}}</p>
-   </div>
- </div>
 </div>

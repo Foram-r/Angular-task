@@ -7,7 +7,6 @@ import { ApiInterfaceService } from './api-interface.service';
   providedIn: 'root'
 })
 export class CommonService {
-  url :string = 'https://raw.githubusercontent.com/PerxTech/angular-interview/master/'
   public appSubject = new BehaviorSubject<any>('');
   public appObservable = this.appSubject.asObservable();
   constructor() { }

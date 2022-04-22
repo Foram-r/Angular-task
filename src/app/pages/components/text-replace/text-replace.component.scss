@@ -4,38 +4,35 @@
 }
 .main {
   width: 197px;
-  height: 78px;
+  word-break: break-word;
+  height: auto;
   background:#3f51b5;
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  margin: auto 50px;
   border: 1px solid transparent;
-  border-radius: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   p.inner-text {
+    padding: 14px 0;
     margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
     color: #fff;
     text-align: center;
   }
 }
-.max-width-70{
-  width: 70%;
-  margin: 0px auto;
-  display: flex;
+.max-width-40{
+    width: 40%;
+    margin: 0px auto;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-  mat-form-field.mat-form-field{
-    .mat-input-element{
-      width: 100%;
-    }
+    mat-form-field.mat-form-field{
+      .mat-input-element{
+        width: 100%;
+      }
   }
   button.mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary {
     height: 50px;
+    margin: auto 50px;
   }
 }

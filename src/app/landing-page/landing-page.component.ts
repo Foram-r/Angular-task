@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { slideInAnimation } from '../animations';
 
 @Component({
   selector: 'app-landing-page',
@@ -9,7 +8,7 @@ import { slideInAnimation } from '../animations';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

@@ -7,20 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextReplaceComponent implements OnInit {
   initialText: string = 'Good morning';
-  customText: any;
   constructor() {}
 
   ngOnInit(): void {}
-  /**
-   * To get input value
-   */
-  onKeyUp(event: any) {
-    this.customText = event.target.value;
-  }
-  /**
-   * To replace text with new value
-   */
-  replaceText() {
-    this.initialText = this.customText;
-  }
 }

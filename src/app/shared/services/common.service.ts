@@ -4,28 +4,28 @@ import { BehaviorSubject } from 'rxjs';
 import { ApiInterfaceService } from './api-interface.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CommonService {
   public appSubject = new BehaviorSubject<any>('');
   public appObservable = this.appSubject.asObservable();
-  constructor() { }
- /**
+  constructor() {}
+  /**
    * to show loader to components
    */
-  showLoader(){
+  showLoader() {
     this.appSubject.next({
       type: 'spinner',
       value: true,
-  });
+    });
   }
   /**
    * to hide loader to components
    */
-  hideLoader(){
+  hideLoader() {
     this.appSubject.next({
       type: 'spinner',
       value: false,
-  });
+    });
   }
 }

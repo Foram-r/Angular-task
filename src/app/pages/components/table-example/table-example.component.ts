@@ -15,7 +15,7 @@ export class TableExampleComponent implements OnInit {
   displayedColumns: string[] = ['Id', 'BookImage', 'BookName', 'CreateDate'];
   constructor(
     private tableservice: TableExampleService,
-    private commonservice: CommonService,
+    private commonservice: CommonService
   ) {}
 
   ngOnInit(): void {
@@ -33,20 +33,25 @@ export class TableExampleComponent implements OnInit {
         this.booksData = res.data;
         this.dataSource = new MatTableDataSource(this.booksData);
         this.dataSource.sort = this.sort;
-        this.dataSource.sortingDataAccessor = (item: { [x: string]: any; id: any; attributes: { content: any; }; }, property: string | number) => {
+        this.dataSource.sortingDataAccessor = (
+          item: { [x: string]: any; id: any; attributes: { content: any } },
+          property: string | number
+        ) => {
           switch (property) {
-             case 'Id': return  item.id;
-             case 'BookName': return  item.attributes.content;
-             default: return item[property];
+            case 'Id':
+              return item.id;
+            case 'BookName':
+              return item.attributes.content;
+            default:
+              return item[property];
           }
-        }
+        };
         this.dataSource.filterPredicate = (data: any, filter: string) => {
           return (
             data.attributes.content.toLocaleLowerCase().includes(filter) ||
             data.id.toLocaleLowerCase().includes(filter)
           );
         };
-
       }
     } catch (e) {}
   }

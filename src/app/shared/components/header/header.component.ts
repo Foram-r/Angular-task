@@ -1,31 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  trigger,
-  style,
-  transition,
-  animate,
-  keyframes,
-  group,
-} from '@angular/animations';
+import { trigger, style, transition, animate } from '@angular/animations';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   animations: [
     trigger('flyInOut', [
-      transition(":enter", [
+      transition(':enter', [
         style({ transform: 'translateX(-100%)' }),
         animate('0.5s'),
       ]),
-      transition(":enter",[
+      transition(':enter', [
         animate('0.5s', style({ transform: 'translateX(100%)' })),
       ]),
     ]),
   ],
 })
 export class HeaderComponent implements OnInit {
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

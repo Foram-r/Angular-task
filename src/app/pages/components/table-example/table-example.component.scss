@@ -1,8 +1,8 @@
 mat-table {
   width: 70%;
   margin: 0px auto;
-  border: 1px solid rgba(0,0,0,.12);
-  .mat-header-row{
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  .mat-header-row {
     height: auto;
     padding: 10px;
     min-height: auto;
@@ -10,18 +10,20 @@ mat-table {
   img.book-poster {
     height: 70px;
     margin: 10px 0;
-}
-mat-cell:first-of-type, mat-footer-cell:first-of-type{
-  padding: 10px;
-}
-mat-header-cell:first-of-type{
-  padding: 0;
-}
-}
-.max-width-70{
-  width: 70%;margin:0px auto;
-  .mat-form-field {
-      font-size: 14px;
-      width: 100%;
-    }
   }
+  mat-cell:first-of-type,
+  mat-footer-cell:first-of-type {
+    padding: 10px;
+  }
+  mat-header-cell:first-of-type {
+    padding: 0;
+  }
+}
+.max-width-70 {
+  width: 70%;
+  margin: 0px auto;
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+}

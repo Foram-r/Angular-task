@@ -13,7 +13,7 @@ export class TableExampleService {
   /**
    * Get listing of books data
    */
-async  getBooksData() {
+  async getBooksData() {
     try {
       const res = await this.apiService
         .get(this.config.TABLE_EXAMPLE_DATA)

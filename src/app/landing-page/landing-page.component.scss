@@ -1,15 +1,15 @@
 .cover-page {
-  margin:0px;
- height:100%;
- width:100%;
- background:url('/assets/images/cover-page.png');
- background-size:cover;
- position: relative;
- button.mat-primary{
-   position: absolute;
-   bottom: 5%;
-   width: auto;
-  left: 50%;
-  transform: translateX(-50%);
- }
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  background: url("/assets/images/cover-page.png");
+  background-size: cover;
+  position: relative;
+  button.mat-primary {
+    position: absolute;
+    bottom: 5%;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

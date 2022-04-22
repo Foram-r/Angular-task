@@ -1,11 +1,11 @@
 <div class="relative">
-<div class="max-width-40">
-  <div class="main">
-     <p class="inner-text">{{initialText}}</p>
+  <div class="max-width-40">
+    <div class="main">
+      <p class="inner-text">{{ initialText }}</p>
+    </div>
+    <mat-form-field appearance="standard">
+      <mat-label>Change text here</mat-label>
+      <input matInput placeholder="Placeholder" [(ngModel)]="initialText" />
+    </mat-form-field>
   </div>
-  <mat-form-field appearance="standard">
-    <mat-label>Change text here</mat-label>
-    <input matInput placeholder="Placeholder"  [(ngModel)]="initialText">
-  </mat-form-field>
-</div>
 </div>
